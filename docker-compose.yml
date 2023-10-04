@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  my-web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+  my-krakend:
+    build:
+      context: ./krakend
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
